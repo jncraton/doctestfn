@@ -18,7 +18,14 @@ Usage
 -----
 
 ```
-usage: doctestfn module function
+usage: doctestfn [-h] module function
 
-Run doctests for one Python function in a module
+Run doctests for one function
+
+positional arguments:
+  module      Module to load
+  function    Function to test
+
+optional arguments:
+  -h, --help  show this help message and exit
 ```
