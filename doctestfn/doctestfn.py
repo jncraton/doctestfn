@@ -14,6 +14,11 @@ def main():
     # Add working directory to module search path
     sys.path.append(os.getcwd())
 
+    # Remove .py from filename if included by mistake
+    # This helps with shell filename completion
+    if args.module.endswith('.py'):
+        args.module = args.module[:-3]
+
     # Import the module
     m = importlib.import_module(args.module)
 
