@@ -5,7 +5,7 @@ with open("readme.md", "r") as fh:
 
 setuptools.setup(
     name="doctestfn",
-    version="1.0.2",
+    version="1.0.3",
     author="Jon Craton",
     author_email="jon@joncraton.com",
     description="Run doctests for a single function",
