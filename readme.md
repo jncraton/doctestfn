@@ -18,14 +18,15 @@ Usage
 -----
 
 ```
-usage: doctestfn [-h] module function
+usage: doctestfn [-h] [-v] module function
 
 Run doctests for one function
 
 positional arguments:
-  module      Module to load
-  function    Function to test
+  module         Module to load
+  function       Function to test
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help     show this help message and exit
+  -v, --verbose  Enable verbose doctest output
 ```
