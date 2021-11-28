@@ -8,6 +8,7 @@ def main():
     ap = argparse.ArgumentParser(description="Run doctests for one function")
     ap.add_argument("module", help="Module to load")
     ap.add_argument("function", help="Function to test")
+    ap.add_argument("-v", "--verbose", help="Enable verbose doctest output", default=False, action='store_true')
 
     args = ap.parse_args()
 
@@ -27,7 +28,7 @@ def main():
         if not attr.startswith('_'):
             globals()[attr] = getattr(m, attr)
 
-    doctest.run_docstring_examples(globals()[args.function], globals())
+    doctest.run_docstring_examples(globals()[args.function], globals(), verbose=args.verbose)
 
 if __name__ == '__main__':
     main()
